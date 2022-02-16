@@ -1,8 +1,13 @@
-class Solution:
-    def removeElement(self, nums: List[int], val: int) -> int:
-        print ("Hello World")
-        return 0
+#nums = [0,0,1,1,1,2,2,3,3,4]
+nums = [-1,0,0,0,0,3,3]
+list = []
+count = 0
+for item in nums:
+    if (list.__contains__(item) == False):
+        list.append(item)
+for item in list:
+    nums[count] = item
+    count += 1
 
-solution = Solution([1, 2, 3], 3)
-
-
+print(count)
+print(nums)
