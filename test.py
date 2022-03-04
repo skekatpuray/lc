@@ -1,51 +1,12 @@
-import json
-import numpy as np
+import DataStructuresModule as ds_module
 
-class Laptop():
-	name = "somename"
+myStack = ds_module.createStack(size = 3)
 
-class Stack():
-	topPointer = 0
-	innerList = []
-	def push(item):
-		innerList.append(item)		
+myStack.push(20)
+myStack.print()
 
+myStack.push(30)
+myStack.print()
 
-
-
-#laptop1 = Laptop()
-#laptop1.name = 'Dell Alienware'
-#laptop1.processor = 'Intel Core i7'
-#laptop1.newField = "chaman"
-#jsonStr = json.dumps(laptop1.__dict__)
-#print(jsonStr)
-#()[]{}
-
-charMap = { ')' : '(', '}' : '{', ']' : '[' }
-openChars = ['(', '{', '[']
-
-input = '{{()}}'
-
-lst = []
-
-isValid = False
-
-for someChar in input:
-	if (len(lst) == 0):
-		lst.append(someChar)
-	else:
-		if (openChars.__contains__(someChar)):
-			lst.append(someChar)
-		else:
-			topChar = lst.__getitem__(len(lst) - 1)
-			if (topChar == charMap[someChar]):
-				lst.pop()
-			else:
-				isValid = False
-				break
-
-
-if (len(lst) == 0):
-	isValid = True
-
-print(isValid)
+myStack.push(40)
+myStack.print()
